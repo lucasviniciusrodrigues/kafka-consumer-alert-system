@@ -20,9 +20,10 @@ public class AlertController {
     }
 
     @PostMapping(value="/wheater")
-    public ResponseEntity<Object> getClient(
+    public ResponseEntity<Void> getClient(
             @RequestBody WheaterAlert wheaterAlert) throws BadRequestMoisturePercentage {
-        return new ResponseEntity<Object>(checkWheatherUseCase.execute(wheaterAlert.checkValues()), HttpStatus.OK);
+        checkWheatherUseCase.execute(wheaterAlert.checkValues());
+        return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
 }
