@@ -1,8 +1,10 @@
 package com.fiap.kafka.consumer.domain.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fiap.kafka.consumer.adapter.exception.BadRequestLatitude;
 import com.fiap.kafka.consumer.adapter.exception.BadRequestLongitude;
 import com.fiap.kafka.consumer.adapter.exception.BadRequestMoisturePercentage;
+import com.fiap.kafka.consumer.adapter.exception.BadRequestTemperature;
 import lombok.Data;
 import lombok.SneakyThrows;
 
@@ -14,6 +16,8 @@ public class WheaterAlert {
     private double longitude;
     private int temperatureCelsius;
     private int moisturePercentage;
+
+    @JsonProperty("isTraceble")
     private boolean isTraceble;
 
     @SneakyThrows
@@ -41,9 +45,9 @@ public class WheaterAlert {
             throw new BadRequestMoisturePercentage(moisturePercentage);
     }
 
-    private void checkTemperatureCelsius() throws BadRequestMoisturePercentage {
+    private void checkTemperatureCelsius() throws BadRequestTemperature {
         if(temperatureCelsius < -25 || temperatureCelsius > 40)
-            throw new BadRequestMoisturePercentage(temperatureCelsius);
+            throw new BadRequestTemperature(temperatureCelsius);
     }
 
 }
