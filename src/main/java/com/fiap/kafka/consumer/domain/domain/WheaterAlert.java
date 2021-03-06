@@ -50,4 +50,13 @@ public class WheaterAlert {
             throw new BadRequestTemperature(temperatureCelsius);
     }
 
+    @Override
+    public String toString(){
+        return "Drone Id: " + droneId
+                + "\n Latitude: " + latitude
+                + "\n Longitude: " + longitude
+                + "\n Temperatura: " + temperatureCelsius
+                + "\n Umidade percentual: " + moisturePercentage;
+    }
+    
 }

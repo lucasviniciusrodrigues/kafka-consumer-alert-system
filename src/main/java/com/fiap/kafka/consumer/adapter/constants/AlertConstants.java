@@ -7,5 +7,5 @@ public class AlertConstants {
 
 
 
-    public static final String CONTENT_TYPE_JSON = "text/html";
+    public static final String CONTENT_TYPE_TEXT_HTML = "text/html";
 }
