@@ -51,14 +51,14 @@ public class KafkaConsumerSubscriber {
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 
-        properties.put(ConsumerConfig.GROUP_ID_CONFIG, "aquele-id");
+        properties.put(ConsumerConfig.GROUP_ID_CONFIG, "id");
         properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
         properties.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);
 
         consumer = new KafkaConsumer<String, String>(properties);
 
-        consumer.subscribe(Collections.singleton("meu-primeiro-topic"));
+        consumer.subscribe(Collections.singleton("mapeamento-drone"));
 
     }
 }
