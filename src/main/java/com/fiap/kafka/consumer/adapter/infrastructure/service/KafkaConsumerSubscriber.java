@@ -58,7 +58,7 @@ public class KafkaConsumerSubscriber {
 
         consumer = new KafkaConsumer<String, String>(properties);
 
-        consumer.subscribe(Collections.singleton("meu-primeiro-topic"));
+        consumer.subscribe(Collections.singleton("mapeamento-drone"));
 
     }
 }
