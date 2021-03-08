@@ -53,10 +53,10 @@ public class WheaterAlert {
     @Override
     public String toString(){
         return "Drone Id: " + droneId
-                + "\n Latitude: " + latitude
-                + "\n Longitude: " + longitude
-                + "\n Temperatura: " + temperatureCelsius
-                + "\n Umidade percentual: " + moisturePercentage;
+                + "<br/> Latitude: " + latitude
+                + "<br/> Longitude: " + longitude
+                + "<br/> Temperatura: " + temperatureCelsius
+                + "<br/> Umidade percentual: " + moisturePercentage;
     }
     
 }
