@@ -41,3 +41,5 @@ ce33427b578f   confluentinc/cp-kafka:latest       "/etc/confluent/dock…"   4 h
 ```
 
 <p>5º passo - Execute a classe Application</p>  
+
+<p>6º passo - Verifique no console log o consumo das mensagens do Kafka, caso haja alguma disponivel</p>  
